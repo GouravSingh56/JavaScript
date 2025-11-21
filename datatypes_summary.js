@@ -47,3 +47,36 @@ const myFunc = function() {
 }
 console.log(typeof myFunc); // object function
 
+//*****************************************************
+
+// Stack (Primitive), Heap Memory (Non-Primitive)
+
+// Primitive data types are stored in stack memory
+// Non-Primitive data types are stored in heap memory and reference is stored in stack memory 
+
+let num1 = 5  // stored in stack
+let num2 = num1  // copy of num1 is stored in num2  
+console.log("num1 :", num1); // 5
+console.log("num2 :", num2); // 5
+
+let myYoutubename = "codewithgourav"
+let anotherName = myYoutubename
+
+anotherName = "codewithharry"
+console.log("myYoutubename :", myYoutubename);
+console.log("anotherName :", anotherName);
+// both are independent
+
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@upi"
+}
+
+let userTwo = userOne  // both userOne and userTwo point to same object in heap memory
+
+userTwo.email = "gourav@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+// both are dependent
